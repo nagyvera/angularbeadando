@@ -1,0 +1,10 @@
+p{
+  color: #336699;
+}
+
+form {
+
+  box-sizing: border-box;
+  flex-flow: wrap;
+  align-items: center;
+}

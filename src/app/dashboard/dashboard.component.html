@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<h3>Top Characters</h3>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a routerLink="/dashboard" class="navbar-toggler" >Dashboard</a>
+  <a routerLink="/characters" class="navbar-toggler" >Characters</a>
+</nav>
+
+<div class="grid grid-pad">
+  <a *ngFor="let character of characters" class="col-1-4"
+    routerLink="/detail/{{character.id}}">
+    <div class="module character">
+      <h4>{{character.name}}</h4>
+    </div>
+  </a>
+</div>

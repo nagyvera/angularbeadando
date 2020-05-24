@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<div  class="container-lg" *ngIf="character">
+  <form class="col-md-4 mb-3">
+  <h2>{{character.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{character.id}}</div>
+    <label>name:
+      <input type="text" name="name" [(ngModel)]="character.name" placeholder="name" required/>
+    </label>
+  <div>
+    <label>birth:
+      <input type="date" name="birthDate" [(ngModel)]="character.birth" placeholder="birth" required/>
+    </label>
+  </div>
+  <div>
+    <label>job:
+      <input type="text" name="job" [(ngModel)]="character.job" placeholder="job" required/>
+    </label>
+  </div>
+  <button type="submit" class="btn btn-outline-primary" (click)="goBack()">go back</button>
+  <button type="submit" class="btn btn-outline-primary" (click)="save()">save </button>
+  </form>
+</div>
